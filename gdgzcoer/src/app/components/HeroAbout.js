@@ -11,12 +11,12 @@ const HeroAbout = () => {
                     <span className="text-[#DB4437]">D</span>
                     <span className="text-[#F4B400]">G</span>
                     <span className="italic text-sm md:text-xl text-[#4285F4] ">on campus <span className="text-[#0F9D58]">ZCOER</span></span></h1>
-                <p class=" text-[#0F9D58] font-bold text-2xl  md:text-4xl mt-7 leading-tight">
+                <p className=" text-[#0F9D58] font-bold text-2xl  md:text-4xl mt-7 leading-tight">
                    <span className="text-[#4285F4]">Code</span>.
                    <span className="text-[#DB4437]">Collaborate</span>.
                    <span className="text-[#F4B400]">Create</span>.
                 </p>
-                <p class="text-xl mt-3 font-semibold leading-relaxed">
+                <p className="text-xl mt-3 font-semibold leading-relaxed">
                     Welcome to the Future of Innovation at GDG on Campus ZCOER..!
                 </p>
                 

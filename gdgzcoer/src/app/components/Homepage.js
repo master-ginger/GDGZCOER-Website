@@ -6,8 +6,7 @@ export default function Homepage(){
         <div>
             <HeroAbout/>
             <Navbar/>
-            <HeroAbout/>
-            <HeroAbout/>
+            
         </div>
     )
 }
