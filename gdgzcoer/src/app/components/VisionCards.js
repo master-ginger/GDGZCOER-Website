@@ -37,7 +37,7 @@ const Vision = () => {
                 src={card.image}
                 alt={card.title}
                 fill
-                className="rounded-md object-cover"
+                className="rounded-md object-contain"
               />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-gray-800">{card.title}</h3>
