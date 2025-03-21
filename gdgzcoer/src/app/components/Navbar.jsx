@@ -1,7 +1,11 @@
+/*
+    Author :- Prathamesh Kothalkar
+*/
+
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { FaHome } from "react-icons/fa";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -47,15 +51,15 @@ const Navbar = () => {
   </div>
 
   <div className="hidden sm:flex space-x-8 text-lg">
-    <a href="#" className="hover:text-blue-400 transition-colors">
+    <Link href="/" className="hover:text-blue-400 transition-colors">
       Home
-    </a>
+    </Link>
     <a href="#" className="hover:text-blue-400 transition-colors">
       Team
     </a>
-    <a href="#" className="hover:text-blue-400 transition-colors">
+    <Link href="/events" className="hover:text-blue-400 transition-colors">
       Events
-    </a>
+    </Link>
     <a href="#" className="hover:text-blue-400 transition-colors">
       About
     </a>
@@ -102,15 +106,15 @@ const Navbar = () => {
             height={40}
             className="mr-2 rounded-full"
           />
-          <a href="#" className="hover:text-blue-400 transition-colors mt-4">
+          <Link href="/" className="hover:text-blue-400 transition-colors mt-4">
             Home
-          </a>
+          </Link>
           <a href="#" className="hover:text-blue-400 transition-colors">
             Team
           </a>
-          <a href="#" className="hover:text-blue-400 transition-colors">
+          <Link href="/events" className="hover:text-blue-400 transition-colors">
             Events
-          </a>
+          </Link>
           <a href="#" className="hover:text-blue-400 transition-colors">
             About
           </a>
