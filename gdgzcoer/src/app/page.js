@@ -1,5 +1,5 @@
-import Homepage from "./components/Homepage";
-import TeamCard from './components/teamcard';
+import Homepage from "@/components/Homepage";
+import TeamCard from "@/components/teamcard";
 
 
 export default function Home() {

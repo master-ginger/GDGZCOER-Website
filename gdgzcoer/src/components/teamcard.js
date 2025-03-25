@@ -483,7 +483,7 @@ const teams = [
 ];
 
 // Main App Component
-function App() {
+function TeamCard() {
   return (
     <div className="App">
       <div className="ShowcaseTeam_ShowcaseTeam__3cxr+">
@@ -533,4 +533,4 @@ function App() {
   );
 }
 
-export default App;
+export default TeamCard;

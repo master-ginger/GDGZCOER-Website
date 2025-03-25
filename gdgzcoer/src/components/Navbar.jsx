@@ -6,10 +6,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-<<<<<<< HEAD:gdgzcoer/src/components/Navbar.jsx
-import { FaHome } from "react-icons/fa";
-=======
->>>>>>> upstream/main:gdgzcoer/src/app/components/Navbar.jsx
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -58,9 +54,9 @@ const Navbar = () => {
     <Link href="#" className="hover:text-blue-400 transition-colors">
       Home
     </Link>
-    <a href="#" className="hover:text-blue-400 transition-colors">
+    <Link href="/team" className="hover:text-blue-400 transition-colors">
       Team
-    </a>
+    </Link>
     <Link href="/events" className="hover:text-blue-400 transition-colors">
       Events
     </Link>
