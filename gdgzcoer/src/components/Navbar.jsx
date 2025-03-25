@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 
 const Navbar = () => {
@@ -47,21 +48,19 @@ const Navbar = () => {
   </div>
 
   <div className="hidden sm:flex space-x-8 text-lg">
-    <a href="#" className="hover:text-blue-400 transition-colors">
+    <Link href="#" className="hover:text-blue-400 transition-colors">
       Home
-    </a>
+    </Link>
     <a href="#" className="hover:text-blue-400 transition-colors">
       Team
     </a>
     <a href="#" className="hover:text-blue-400 transition-colors">
       Events
     </a>
-    <a href="#" className="hover:text-blue-400 transition-colors">
+    <Link href="#" className="hover:text-blue-400 transition-colors">
       About
-    </a>
-    <a href="#" className="hover:text-blue-400 transition-colors">
-      Blogs
-    </a>
+    </Link>
+    
     <a href="#" className="hover:text-blue-400 transition-colors">
       Contact Us
     </a>

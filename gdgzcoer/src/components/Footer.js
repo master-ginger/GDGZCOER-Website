@@ -1,4 +1,4 @@
-import gdgLogo from "../../../public/gdgLogo.png"
+import gdgLogo from "../../public/gdgLogo.png"
 import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 export default function Footer(){

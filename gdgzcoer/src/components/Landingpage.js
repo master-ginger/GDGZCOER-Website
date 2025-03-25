@@ -1,20 +1,14 @@
 import Image from "next/image";
-import gdglogo from "../../../public/gdglogo.png"
-import wavybg from "../../../public/wavybg.png"
+import gdglogo from "../../public/gdglogo.png"
+import wavybg from "../../public/wavybg.png"
 
 
 export default function Landingpage(){
     return(
         <div>
-
-            <div className="relative h-auto w-full top-[-2rem]">
-                <Image 
-                        className="z-0 w-full top-[0]"
-                        src={wavybg} 
-                        alt="background-image">
-                </Image>
-                
-                <div className="text-center w-full z-[1] top-60 bg-transparent">
+            
+            <div className="relative h-auto w-full ">   
+                <div className="text-center w-full z-[1] mt-60 bg-transparent">
                     <Image
                         className="w-[14rem] m-auto"
                         src={gdglogo} 
