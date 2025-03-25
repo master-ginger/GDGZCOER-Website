@@ -9,11 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "mongoose": "^8.12.1",
-=======
-    "gdgzcoer": "file:",
->>>>>>> upstream/main
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
