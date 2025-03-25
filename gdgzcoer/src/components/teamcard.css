@@ -1,0 +1,172 @@
+/* Container for team cards */
+.ShowcaseTeam_container__3AdhQ {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 20px; /* Add padding to all sides */
+}
+
+.team-card, .team-member-card {
+    width: 250px;
+    height: 400px;
+    background: #f0ebeb;
+    border: 5px solid #f0ebeb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(113, 112, 114, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.team-card:hover, .team-member-card:hover {
+    background: #d0d0d0;
+}
+
+/* Image styles */
+.team-card img, .team-member-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(0.9);
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.team-card:hover img, .team-member-card:hover img {
+    transform: scale(1.2);
+    border-radius: 0%;
+    margin-bottom: 30px;
+}
+
+/* Content styles */
+.team-card .content, .team-member-card .content {
+    position: relative;
+    background: rgba(240, 235, 235, 0.8);
+    padding: 10px;
+    color: #181717;
+    margin-top: 10px;
+}
+
+/* Title styling */
+.ShowcaseTeam_teamHeader__7cnRi {
+    font-size: 48px;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+/* New Paragraph Styling */
+.team-info-paragraph {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    color: #333;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-bottom: 20px; /* Adjust margin as needed */
+    padding: 10px; 
+}
+
+/* Social icons styles */
+.team-card .social-icons, .team-member-card .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.fa-brands, .fa-solid {
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease; /* Ensure smooth color transition */
+}
+
+.fa-brands:hover, .fa-solid:hover {
+    color: #0077b5; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.fa-linkedin:hover {
+    color: #0077b5; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.fa-square-github:hover {
+    color: #333; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.fa-square-envelope:hover {
+    color: #d44638; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+
+.fa-brands:hover, .fa-solid:hover {
+    color: #0077b5; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+
+.fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.fa-square-github:hover {
+    color: #333;
+}
+
+.fa-square-envelope:hover {
+    color: #d44638;
+}
+
+/* On hover: scaling and shadow effect */
+.team-card:hover, .team-member-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgb(110, 106, 106);
+}
+
+/* Adding an overlay on hover */
+.team-card::before, .team-member-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(87, 88, 87, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-card:hover::before {
+    opacity: 1;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 28px;
+    /* font-weight: 100; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.Members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.Lead {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}

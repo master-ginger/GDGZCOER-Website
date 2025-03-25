@@ -1,8 +1,15 @@
+/*
+    Author :- Prathamesh Kothalkar
+*/
+
 "use client";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+<<<<<<< HEAD:gdgzcoer/src/components/Navbar.jsx
 import { FaHome } from "react-icons/fa";
+=======
+>>>>>>> upstream/main:gdgzcoer/src/app/components/Navbar.jsx
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -54,9 +61,9 @@ const Navbar = () => {
     <a href="#" className="hover:text-blue-400 transition-colors">
       Team
     </a>
-    <a href="#" className="hover:text-blue-400 transition-colors">
+    <Link href="/events" className="hover:text-blue-400 transition-colors">
       Events
-    </a>
+    </Link>
     <Link href="#" className="hover:text-blue-400 transition-colors">
       About
     </Link>
@@ -101,15 +108,15 @@ const Navbar = () => {
             height={40}
             className="mr-2 rounded-full"
           />
-          <a href="#" className="hover:text-blue-400 transition-colors mt-4">
+          <Link href="/" className="hover:text-blue-400 transition-colors mt-4">
             Home
-          </a>
+          </Link>
           <a href="#" className="hover:text-blue-400 transition-colors">
             Team
           </a>
-          <a href="#" className="hover:text-blue-400 transition-colors">
+          <Link href="/events" className="hover:text-blue-400 transition-colors">
             Events
-          </a>
+          </Link>
           <a href="#" className="hover:text-blue-400 transition-colors">
             About
           </a>
