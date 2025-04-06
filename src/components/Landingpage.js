@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gdgLogo from "../../public/gdglogo.png"
+import gdgLogo from "../../public/gdgLogo.png"
 import wavybg from "../../public/wavybg.png"
 
 
