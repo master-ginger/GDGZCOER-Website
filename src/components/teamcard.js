@@ -58,8 +58,10 @@ const teams = [
       githubUrl: "https://github.com/lavanyamoolya",
       image: "/Asset/lavanya_moolya.webp"
     },
-    members: [
-      {
+    
+  },{
+    name:"Administration",
+    leader: {
         name: "Shivam Awasare",
         title: "Administration Lead",
         email: "shivammawasare@gmail.com",
@@ -67,15 +69,8 @@ const teams = [
         githubUrl: "https://github.com/shivamawasare",
         image: "/Asset/shivam_awasare.webp"
       },
-      {
-        name: "Yash Gwalavanshi",
-        title: "Community Manager",
-        email: "yashgwalavanshi@gmail.com",
-        linkedinUrl: "https://www.linkedin.com/in/yashgwalavanshi",
-        githubUrl: "https://github.com/yashgwalavanshi",
-        image: "/Asset/yash_gwalvanshi.webp"
-      }
-    ]
+     
+  
   },
   // WEB DEVELOPMENT
   {
