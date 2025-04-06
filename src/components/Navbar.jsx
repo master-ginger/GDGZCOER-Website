@@ -51,7 +51,7 @@ const Navbar = () => {
   </div>
 
   <div className="hidden sm:flex space-x-8 text-lg">
-    <Link href="#" className="hover:text-blue-400 transition-colors">
+    <Link href="/home" className="hover:text-blue-400 transition-colors">
       Home
     </Link>
     <Link href="/team" className="hover:text-blue-400 transition-colors">
@@ -60,7 +60,7 @@ const Navbar = () => {
     <Link href="/events" className="hover:text-blue-400 transition-colors">
       Events
     </Link>
-    <Link href="#" className="hover:text-blue-400 transition-colors">
+    <Link href="/about" className="hover:text-blue-400 transition-colors">
       About
     </Link>
     

@@ -514,18 +514,24 @@ function TeamCard() {
               />
             </div>
             <div className="Members">
-              {team.members.map((member, memberIndex) => (
-                <TeamMemberCard
-                  key={memberIndex}
-                  name={member.name}
-                  title={member.title}
-                  linkedinUrl={member.linkedinUrl}
-                  githubUrl={member.githubUrl}
-                  email={member.email}
-                  image={member.image}
-                />
-              ))}
-            </div>
+  {team.members.map((member, memberIndex) => {
+    const numberOfMembers = team.members.length;
+    const cardWidth = 100 / numberOfMembers; // Adjust the width accordingly
+    return (
+      <TeamMemberCard
+        key={memberIndex}
+        name={member.name}
+        title={member.title}
+        linkedinUrl={member.linkedinUrl}
+        githubUrl={member.githubUrl}
+        email={member.email}
+        image={member.image}
+        style={{ width: `${cardWidth}%` }} // Apply the width dynamically
+      />
+    );
+  })}
+</div>
+
           </div>
         );
       })}

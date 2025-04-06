@@ -52,6 +52,7 @@
     padding: 10px;
     color: #181717;
     margin-top: 10px;
+    width: auto;
 }
 
 /* Title styling */
@@ -69,6 +70,8 @@
     color: #333;
     margin-top: 20px; /* Adjust margin as needed */
     margin-bottom: 20px; /* Adjust margin as needed */
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 10px; 
 }
 

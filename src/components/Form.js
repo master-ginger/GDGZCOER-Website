@@ -74,7 +74,7 @@ export default function Form() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Name"
-              className="w-full p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
+              className="w-[50%] p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
             />
           </div>
           <div className="mb-6">
@@ -84,7 +84,7 @@ export default function Form() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Email"
-              className="w-full p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
+              className="w-[50%] p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
             />
           </div>
           <div className="mb-6">
@@ -94,7 +94,7 @@ export default function Form() {
               value={formData.subject}
               onChange={handleChange}
               placeholder="Subject"
-              className="w-full p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
+              className="w-[50%] p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
             />
           </div>
           <div className="mb-8">
@@ -103,7 +103,7 @@ export default function Form() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Message"
-              className="w-full p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
+              className="w-[50%] p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
               rows="4"
             ></textarea>
           </div>
