@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gdglogo from "../../public/gdglogo.png"
+import gdgLogo from "../../public/gdglogo.png"
 import wavybg from "../../public/wavybg.png"
 
 
@@ -11,7 +11,7 @@ export default function Landingpage(){
                 <div className="text-center w-full z-[1] mt-60 bg-transparent">
                     <Image
                         className="w-[14rem] m-auto"
-                        src={gdglogo} 
+                        src={gdgLogo} 
                         alt="GDG-Logo">
                     </Image>
                 </div>
