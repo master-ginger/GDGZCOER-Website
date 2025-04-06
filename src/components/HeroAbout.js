@@ -3,6 +3,7 @@
 */
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 const HeroAbout = () => {
     return <>
         <section className="bg-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-10 space-y-10 md:space-y-0 mt-14">
@@ -24,12 +25,12 @@ const HeroAbout = () => {
                 </p>
                 
                 <div className="flex gap-3 justify-center md:justify-start">
-                    <button className="mt-6 bg-[#4285F4] text-white py-3 px-8 rounded-xl font-semibold shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2  focus:ring-opacity-75">
-                        Join Us
-                    </button>
-                    <button className=" mt-6 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-4 px-8 border border-blue-500 hover:border-transparent rounded-xl">
-                        Check More
-                    </button>
+                <Link href="https://gdg.community.dev/gdg-on-campus-zeal-college-of-engineering-research-pune-india/">
+    <button className="bg-[#4285F4] text-white py-3 px-8 rounded-xl font-semibold shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-opacity-75">
+      Join Us
+    </button>
+  </Link>
+                    
                 </div>
             </div>
 

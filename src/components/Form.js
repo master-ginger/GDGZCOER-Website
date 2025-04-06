@@ -1,128 +1,93 @@
-"use client"
-import { IoCall, IoMail, IoLocationSharp } from "react-icons/io5";
+"use client";
+import {
+  IoCall,
+  IoMail,
+  IoLocationSharp,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+} from "react-icons/io5";
+import { toast } from "react-hot-toast";
 import { useState } from "react";
 
-export default function Form() {
-  const [copied, setCopied] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formResponse, setFormResponse] = useState("");
-
-  const handleCopy = (text) => {
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setFormResponse("Form submitted successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        setFormResponse(result.error || "Something went wrong!");
-      }
-    } catch (error) {
-      setFormResponse("An error occurred while submitting the form.");
+export default function ContactDetails() {
+  const handleClick = (item) => {
+    if (item.key === "phone") {
+      navigator.clipboard.writeText(item.value);
+      toast.success("📞 Phone number copied to clipboard!");
+    } else if (item.key === "email") {
+      window.location.href = `mailto:${item.value}`;
+    } else if (item.link) {
+      window.open(item.link, "_blank");
     }
-
-    setIsSubmitting(false);
   };
+
+  const items = [
+    {
+      icon: <IoCall className="text-green-500 text-3xl" />,
+      label: "Phone Number",
+      value: "+91 98765 43210",
+      key: "phone",
+    },
+    {
+      icon: <IoMail className="text-blue-500 text-3xl" />,
+      label: "Email ID",
+      value: "gdgoczcoer@zealeducation.com",
+      key: "email",
+    },
+    {
+      icon: <IoLocationSharp className="text-red-500 text-3xl" />,
+      label: "Location",
+      value: "Zeal College of Engineering, Pune",
+      key: "location",
+    },
+    {
+      icon: <IoLogoInstagram className="text-pink-500 text-3xl" />,
+      label: "Instagram",
+      value: "@gdgzcoer",
+      key: "insta",
+      link: "https://www.instagram.com/gdgoc_zcoer?igsh=MTJ3ZHZwbW45amozaw==",
+    },
+    {
+      icon: <IoLogoLinkedin className="text-blue-600 text-3xl" />,
+      label: "LinkedIn",
+      value: "GDG ZCOER",
+      key: "linkedin",
+      link: "https://www.linkedin.com/company/gdgoc-zcoer/",
+    },
+  ];
 
   return (
-    <div className="flex flex-wrap bg-gray-100 min-h-screen p-10">
-      {/* Form Section */}
-      <div className="flex-1 bg-yellow-400 rounded-lg shadow-lg p-8 m-4">
-        <h2 className="text-3xl font-extrabold text-center mb-6 text-gray-800">
-          Connect with Us
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-yellow-100 to-yellow-300 p-6">
+      <div className="backdrop-blur-lg bg-white/60 border border-yellow-200 rounded-3xl shadow-2xl p-10 max-w-3xl w-full">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">
+          Connect with <span className="text-yellow-600">GDGOC ZCOER</span>
         </h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-6">
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Name"
-              className="w-[50%] p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
-            />
-          </div>
-          <div className="mb-6">
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email"
-              className="w-[50%] p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
-            />
-          </div>
-          <div className="mb-6">
-            <input
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              placeholder="Subject"
-              className="w-[50%] p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
-            />
-          </div>
-          <div className="mb-8">
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Message"
-              className="w-[50%] p-4 border-b-2 border-gray-600 focus:outline-none focus:border-green-500 rounded-lg text-lg"
-              rows="4"
-            ></textarea>
-          </div>
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              className="bg-green-700 text-white px-8 py-3 rounded-full shadow-lg hover:bg-green-600 focus:outline-none transition-colors text-lg"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Sending..." : "Send"}
-            </button>
-          </div>
-        </form>
+        <p className="text-center text-lg text-gray-700 mb-10">
+          Reach out to us for event collaborations, queries, or just to say hi!
+        </p>
 
-        {formResponse && (
-          <div className="mt-4 text-center text-lg text-green-600">{formResponse}</div>
-        )}
+        <div className="space-y-6">
+          {items.map((item) => (
+            <div
+              key={item.key}
+              onClick={() => handleClick(item)}
+              className="flex items-center gap-4 px-4 py-3 bg-white/80 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer"
+            >
+              {item.icon}
+              <div>
+                <p className="text-sm text-gray-500">{item.label}</p>
+                <p className="text-lg font-medium text-gray-800">{item.value}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-xl font-semibold text-yellow-700">
+            Let’s build the future of tech together 🚀
+          </p>
+        </div>
       </div>
     </div>
   );
 }
-

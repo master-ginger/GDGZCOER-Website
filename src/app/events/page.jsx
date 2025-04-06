@@ -2,8 +2,6 @@
     Author :- Prathamesh Kothalkar
 */
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function Page() {
@@ -60,7 +58,6 @@ export default function Page() {
 
     return (
         <>
-            <Navbar />
             <div className="h-full">
                 <div className="relative bg-[url('https://gdgakgec.org/static/media/background9.9ad3cf924bcca4b38f8a.png')] bg-cover bg-center md:bg-fixed h-auto md:h-80 shadow-sm">
                     <div className="p-9">
@@ -80,7 +77,6 @@ export default function Page() {
                 ))}
             </div>
 
-            <Footer />
         </>
     );
 }

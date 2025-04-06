@@ -7,13 +7,11 @@ import Vision from "./VisionCards";
 export default function Homepage(){
     return(
         <div>
-            <Navbar/>
             <Landingpage/>
             <HeroAbout/>
             
             <Vision/>
             <Form/>
-            <Footer/>
         </div>
     )
 }

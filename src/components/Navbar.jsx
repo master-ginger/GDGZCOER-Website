@@ -64,9 +64,6 @@ const Navbar = () => {
       About
     </Link>
     
-    <a href="#" className="hover:text-blue-400 transition-colors">
-      Contact Us
-    </a>
   </div>
 </nav>
 
@@ -107,21 +104,16 @@ const Navbar = () => {
           <Link href="/" className="hover:text-blue-400 transition-colors mt-4">
             Home
           </Link>
-          <a href="#" className="hover:text-blue-400 transition-colors">
+          <Link href="/team" className="hover:text-blue-400 transition-colors">
             Team
-          </a>
+          </Link>
           <Link href="/events" className="hover:text-blue-400 transition-colors">
             Events
           </Link>
-          <a href="#" className="hover:text-blue-400 transition-colors">
+          <Link href="/about" className="hover:text-blue-400 transition-colors">
             About
-          </a>
-          <a href="#" className="hover:text-blue-400 transition-colors">
-            Blogs
-          </a>
-          <a href="#" className="hover:text-blue-400 transition-colors">
-            Contact Us
-          </a>
+          </Link>
+
         </nav>
       </div>
 
